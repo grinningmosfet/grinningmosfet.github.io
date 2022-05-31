@@ -1,0 +1,468 @@
+
+:root {
+  --rouge:     #ff0000;
+  --rouge-alpha: #ff0000aa;
+  --groseille: #b51f1f;
+  --leman:     #00a79f;
+  --leman-alpha: #00a79faa;
+  --canard:    #007480;
+  --ardoise:   #413d3a;
+  --perle:     #cac7c7;
+  --blanc:     #ffffff;
+  --noir:      #000000;
+  
+  --source-sans: "Source Sans 3";
+}
+
+details summary::marker {
+ content: "";
+}
+
+cite {
+    font-variant: small-caps;
+    font-style: normal;
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1;
+    min-zoom: 1;
+    max-zoom: 1;
+    user-zoom: fixed;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    margin: 0px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: var(--source-sans);
+    scrollbar-width: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#s-title-header {
+    position: absolute;
+    right: 0px;
+    top: 10%;
+    color: var(--blanc);
+    background-color: var(--rouge);
+    max-width: 40%;
+    padding-right: 130px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    font-size: 2.4em;
+}
+
+#s-title {
+    background-image: url("../img/recensement.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#s-title-authors {
+    background-color: var(--ardoise);
+    color: var(--blanc);
+    list-style: none;
+    text-align: center;
+    width: 300px;
+    margin: 0px;
+    padding: 10px;
+    position: absolute;
+    bottom: 15%;
+    right: 40%;
+    font-size: 1.3em;
+}
+
+#s-title-date {
+    background-color: var(--blanc);
+    color: var(--noir);
+    list-style: none;
+    text-align: center;
+    width: 300px;
+    margin: 0px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0%;
+    right: 20%;
+    font-size: 1.3em;
+}
+
+.slide.slide-contents > h1 {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 50vw;
+    font-size: 3em;
+    padding-top: 20vh;
+    padding-left: 5vw;
+    
+    display: block;
+    background-color: var(--rouge);
+    position: absolute;
+    right: 0px;
+
+    color: var(--blanc);
+}
+
+.slide.slide-contents > ul {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 50vw;
+    font-size: 1.5em;
+    padding-top: 20vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    
+    list-style: none;
+}
+
+.slide.slide-contents > ul li::before {
+    position: relative;
+    right: 0px;
+    font-size: 1.5em;
+    content: "\0025aa \20";
+    color: var(--rouge);
+    transition: right .1s;
+}
+
+.slide.slide-contents > ul li:hover::before {
+    right: 5px;
+}
+
+.slide.slide-bigpic {
+    background-image: url("../img/bogosses.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.slide.slide-bigpic > h1 {
+    font-size: 2.4em;
+    color: white;
+	padding-top: 5vh;
+    padding-left: 5vw;
+    mix-blend-mode: difference;
+}
+
+.slide.slide-bigpic > p {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+    background-color: var(--rouge);
+    color: var(--blanc);
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.slide.slide-bigtext {
+    background-color:  var(--ardoise);
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.slide.slide-bigtext > h1 {
+    font-size: 2.4em;
+    color: var(--blanc);
+	padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.slide.slide-bigtext > p {
+    color: var(--blanc);
+    
+    font-size: 2em;
+    
+    width: 50vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 10vh;
+    
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.slide.slide-bigtext > details {
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    position: absolute;
+    font-size: 1.3em;
+    color: var(--blanc);
+    width: 50%;
+    left: 50vw;
+    bottom: 10vh;
+    z-index: 100;
+    background-color: var(--rouge-alpha);
+}
+
+.slide.slide-bigplot > details {
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    position: absolute;
+    font-size: 1.3em;
+    color: var(--blanc);
+    width: 50%;
+    left: 0vw;
+    bottom: 30vh;
+    z-index: 100;
+    background-color: var(--leman-alpha);
+}
+
+.slide.slide-bigplot > p {
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    position: absolute;
+    font-size: 2em;
+    color: var(--ardoise);
+    width: 50%;
+    left: 50vw;
+    top: 10vh;
+    z-index: 100;
+}
+
+.slide.slide-bigtext > aside > figure > img {
+    position: absolute;
+    top:0px;
+    right: 0px;
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+    background-size: 150%;
+}
+
+.slide.slide-bigplot > aside > figure > img {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;
+    background-size: 150%;
+}
+
+.slide.slide-bigplot > aside > figure > figcaption {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 50vw;
+    z-index = 1;
+    background-color: rgba(50, 50, 50, .8);
+    color: var(--perle);
+    text-align: justify;
+}
+
+.slide.slide-bigtext > aside > figure > figcaption {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 50vw;
+    z-index = 1;
+    background-color: rgba(50, 50, 50, .8);
+    color: var(--perle);
+    text-align: justify;
+}
+
+.slide.slide-bigtext > p > em.em-num {
+    position: relative;
+    top: .08em;
+    font-weight: bold;
+    color: var(--blanc);
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+.slide.slide-bigtext > p > em.em-land {
+    position: relative;
+    top: .08em;
+    font-weight: 100;
+    color: var(--blanc);
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+.slide.slide-bigplot {
+    background-color:  var(--perle); 
+}
+
+.slide.slide-bigplot > h1 {
+    position: absolute;
+    left: 50vw;
+    font-size: 2.4em;
+    color: var(--ardoise);
+	padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.slide.slide-bigplot > img {
+    position: absolute;
+    left: 50vw;
+    bottom: 5vh;
+    width: 50vw;
+}
+
+.slide.slide-fullplot > h1 {
+    font-size: 2.4em;
+    color: var(--ardoise);
+	padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.slide.slide-fullplot > img {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30vh;
+    width: 80vw;
+    left: 10vw;
+}
+
+.slide.slide-fullplot > details {
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 0px;
+    padding-left: 5vw;
+    position: absolute;
+    font-size: 1.3em;
+    color: var(--ardoise);
+    width: 80vw;
+    height: 20vh;
+    left: 10vw;
+    top: 10vh;
+}
+
+.slide.slide-fourinrow {
+    background-color:  var(--blanc);
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.slide.slide-fourinrow > img {
+    position: absolute;
+    width: 20vw;
+}
+
+.slide.slide-fourinrow > img:nth-child(2) {
+    top: 20vh;
+    left: 2.5vw;
+}
+
+.slide.slide-fourinrow > img:nth-child(3) {
+    top: 20vh;
+    left: 27.5vw;
+}
+
+.slide.slide-fourinrow > img:nth-child(4) {
+    left: 15vw;
+    top: 55vh;
+}
+
+.slide.slide-fourinrow > h1 {
+    font-size: 2.4em;
+    color: var(--ardoise);
+	padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.slide.slide-fourinrow > details {
+    padding-right: 5vw;
+    padding-top: 20vh;
+    padding-bottom: 0px;
+    padding-left: 5vw;
+    position: absolute;
+    font-size: 1.3em;
+    background-color: var(--rouge);
+    color: var(--blanc);
+    width: 50%;
+    height: 100%;
+    left: 50vw;
+    top: 0vh;
+}
+
+summary:first-letter {
+   font-size: 4em;
+   float: left;
+
+}
+
+details > ol {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: solid 1px;
+}
+
+.slide.slide-textonly > h1 {
+    font-size: 2.4em;
+	padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.slide.slide-textonly {
+    color: var(--blanc);
+    background-color: var(--leman);
+}
+
+.slide.slide-textonly > details {
+    font-size: 1.5em;
+    padding-right: 40vh;
+    padding-left: 40vh;
+    padding-top: 20vh;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.slide.slide-textonly ol {
+    padding-left: 50px;
+}
+
+.slide.slide-textonly li {
+    padding-top: 20px;
+}
+
+.slide.slide-textonly p {
+    padding-top: 20px;
+}
+
+.slide.slide-biblio {
+    background-color: var(--ardoise);
+    color: var(--blanc);
+}
+
+.slide.slide-biblio > iframe {
+    width: 100vw;
+    height: 100vh;
+}
