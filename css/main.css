@@ -467,3 +467,13 @@ details > ol {
     height: 100vh;
     border: 0px;
 }
+#s-title > cite {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index = 1;
+    background-color: rgba(50, 50, 50, .8);
+    color: var(--perle);
+    text-align: justify;
+    font-variant: normal;
+}
